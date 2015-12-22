@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <title></title>
+    <style>
+        *{margin:0; padding:0;}
+        html{overflow-x:hidden;}
+        .clearfix:after{clear:both; content:'.'; display:block; height:0; visibility:hidden; line-height:0}
+        .clearfix{*zoom:1}
+        ul,ol,li{list-style:none;}
+        .lb{position:relative; overflow:hidden; left:50%;}
+        .u1{position:absolute; top:0; width:99999px;} 
+        .u1 li{float:left;}
+        .u1 li a{display:block;}
+        .u1 li .l1{background:url(http://picadmin.keede.com/Keede/Images/2015taiyangyanjing/20150619/l1g.jpg) center; }
+        .u1 li .l2{background:url(http://pic.keede.com/Images/2015frame/20150729/l3.jpg) center; }
+        .u1 li .l3{background:url(http://pic.keede.com/Images/2015taiyangyanjing/20150619/lunbo/l3.jpg) center; }
+        .lb .arrow{position:absolute; width:32px; height:68px; background:url(http://pic.keede.com/Images/2015taiyangyanjing/bg.png) no-repeat 0 -39px; top:50%; margin-top:-34px; cursor:pointer;}
+        .lb .arrow{display:none;}
+        .lb .prev{left:15%;}
+        .lb .next{position:absolute; background-position:0 -112px; right:15%;}
+        .u2{ height:10px; position:absolute; bottom:20px; left:50%; margin-left:-20px; display:none;}
+        .u2 li{background:#ccc; margin-right:5px; width:10px; height:10px; border-radius:7px; float:left; cursor:pointer; _font-size:0;}
+        .u2 .color{background:#f8b500;}
+    </style>
+    <script src="js/jquery.slider.js"></script>
+</head>
+<body>
+<div class="lb">
+    <ul class="u1 clearfix">
+        <li><a href="javascript:;" class="l1"></a></li>
+        <li><a href="javascript:;" class="l2"></a></li>
+        <li><a href="javascript:;" class="l3"></a></li>
+    </ul>
+    <ul class="u2"></ul>
+    <a class="prev arrow" href="javascript:;"></a>
+    <a class="next arrow" href="javascript:;"></a>
+</div>
+<script>
+    $('.lb').slider({
+        delay:1000
+    })
+</script>
+</body>
+</html>
