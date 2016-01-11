@@ -222,6 +222,6 @@
         };
         var options= $.extend({},defaults,parameter); //把参数parameter的值 和 slider方法里面的defaults对象内的值 合并后 赋给options
         var Newslider=new Slider(this,options);
-        callback(Newslider)
+        //callback(Newslider)
     }; //传参或默认值
 })(jQuery,window,document);
