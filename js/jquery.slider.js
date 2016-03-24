@@ -20,7 +20,7 @@
 
         //初始化
         (function init(){
-            $this.width(options.imgWidth).height(options.imgHeight).css('margin-left',-options.imgWidth/2); //设置主容器的宽高和位置
+            if(options.isFullscreen) $this.width(options.imgWidth).height(options.imgHeight).css('margin-left',-options.imgWidth/2); //设置主容器的宽高和位置
             $listLi.each(function(){
                 $navList.append('<li></li>');
             }).find('a').width(options.imgWidth).height(options.imgHeight);
@@ -206,6 +206,7 @@
             nextBtn:'.next',                 //下一张按钮
             activeTriggerCls: 'color',   //导航选中时的class
             /* 动画相关 */
+            isFullscreen:false,          //是否全屏轮播
             Direction:'y',              //移动方向 'x'横向，否则纵向
             sliderDirection:'down_up',  //移动方向 纵向 默认'down_up'由下而上滚动   *****Direction必须是纵向
             navTriggers:true,           //是否有导航触发点
