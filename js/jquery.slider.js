@@ -38,13 +38,14 @@
         }
 
         //上一帧
-        this.prev=function(e){
+        this.prev=function(){
             _index--;
             move();
         };
 
         //下一帧
-        this.next=function(e){
+        this.next=function(){
+            if($listLi.length==1) return;
             _index++;
             move();
         };
@@ -223,7 +224,6 @@
             duration: 500              //轮播的动画时长
         };
         var options= $.extend({},defaults,parameter); //把参数parameter的值 和 slider方法里面的defaults对象内的值 合并后 赋给options
-        var Newslider=new Slider(this,options);
-        //callback(Newslider)
+        new Slider(this,options);
     }; //传参或默认值
 })(jQuery,window,document);
