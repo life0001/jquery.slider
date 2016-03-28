@@ -20,7 +20,7 @@
 
         //初始化
         (function init(){
-            $this.parent().css('position','relative');
+            $this.css('position','relative');
             if(options.isFullscreen) $this.width(options.imgWidth).height(options.imgHeight).css('margin-left',-options.imgWidth/2); //设置主容器的宽高和位置
             $listLi.each(function(){
                 $navList.append('<li></li>');
